@@ -1,8 +1,10 @@
 var score = 0;
-cross = true;
+var cross = true;
 
 audio = new Audio('music.mp3');
-audio2 = new Audio('gameover.mp3');
+audio2 = new Audio('gameover.wav');
+audio3 = new Audio('dies.wav');
+
 setTimeout(() => {
     audio.play();
 }, 1000);
@@ -47,10 +49,14 @@ setInterval(() => {
         gameOver.innerHTML = "Game Over Reload to start again";
         obstacle.classList.remove('obstacleAni');
         audio2.play();
+
         setTimeout(() => {
             audio2.pause();
             audio.pause();
         }, 1000);
+        dino.style.animation = "fall" + " " + " " + 5 + 's' + " " + "linear";
+        audio3.play();
+
     } else if (offsetX < 145 && cross) {
         score += 1;
         updateScore(score);
