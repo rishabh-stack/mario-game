@@ -38,6 +38,7 @@ setInterval(() => {
     dino = document.querySelector(".dino")
     gameOver = document.querySelector(".gameOver")
     obstacle = document.querySelector(".obstacle");
+    reload = document.querySelector(".reload");
 
     dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
     dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('bottom'));
@@ -54,8 +55,10 @@ setInterval(() => {
             audio2.pause();
             audio.pause();
         }, 1000);
+        reload.style.visibility = 'visible';
         dino.style.animation = "fall" + " " + " " + 5 + 's' + " " + "linear";
         audio3.play();
+
 
     } else if (offsetX < 145 && cross) {
         score += 1;

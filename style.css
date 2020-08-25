@@ -31,7 +31,7 @@ body {
     font-size: 73px;
     text-align: center;
     top: 93px;
-    font-family: sans-serif;
+    font-family: monospace, monaco;
 }
 
 .gameOver {
@@ -39,7 +39,7 @@ body {
     font-size: 73px;
     text-align: center;
     top: 93px;
-    font-family: sans-serif;
+    font-family: comic 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .obstacle {
@@ -59,6 +59,18 @@ body {
 
 .obstacleAni {
     animation: obstacleAni 5s linear infinite;
+}
+
+.reload {
+    visibility: hidden;
+    background-image: url(reload.png);
+    position: relative;
+    background-repeat: no-repeat;
+    width: 156px;
+    height: 153px;
+    background-size: cover;
+    top: 120px;
+    left: 45vw;
 }
 
 @keyframes dino {
